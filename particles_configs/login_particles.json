@@ -1,14 +1,14 @@
 {
   "particles": {
     "number": {
-      "value": 160,
+      "value": 60,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#FFF"
     },
     "shape": {
       "type": "circle",
@@ -36,7 +36,7 @@
       }
     },
     "size": {
-      "value": 5,
+      "value": 6,
       "random": true,
       "anim": {
         "enable": false,
@@ -107,7 +107,7 @@
   "retina_detect": true,
   "config_demo": {
     "hide_card": false,
-    "background_color": "#b61924",
+    "background_color": "",
     "background_image": "",
     "background_position": "50% 50%",
     "background_repeat": "no-repeat",
