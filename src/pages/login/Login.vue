@@ -1,25 +1,14 @@
 <template>
-  <v-app id="signup">
+  <v-app id="login">
     <div id="particles-js"></div>
     <v-overlay :value="overlay">
       <div style="width: 600px">
         <el-row type="flex" class="row-bg" justify="front">
-          <span class="logofont">BunnyPo Signup</span>
+          <span class="logofont">BunnyPo Login</span>
         </el-row>
         <v-container>
           <v-form v-model="valid">
             <v-container>
-              <v-row>
-                <v-text-field
-                  v-model="firstname"
-                  :rules="nameRules"
-                  label="Account name"
-                  persistent-hint
-                  outlined
-                  required
-                  filled
-                ></v-text-field>
-              </v-row>
               <v-row>
                 <v-text-field
                   v-model="lastname"
@@ -58,12 +47,12 @@
                 <v-col>
                   <a href="#">
                     <v-btn style="float: right" color="primary">
-                      Signup
+                      Login
                     </v-btn>
                   </a>
-                  <a href="/login/popular">
+                  <a href="/signup/popular">
                     <v-btn style="float: right; margin-right: 10px" text>
-                      Login
+                      Signup
                     </v-btn>
                   </a>
                 </v-col>

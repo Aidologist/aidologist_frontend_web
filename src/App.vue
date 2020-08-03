@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-main>
       <el-container>
         <el-header>
@@ -10,14 +10,14 @@
                   <img src="BunnyPoLogo.png" width="40px"/>
                   <span class="logofont">
                   BunnyPo
-                </span>
+                  </span>
                 </el-row>
               </div>
             </el-col>
             <el-col :span="8">
               <div class="grid-content" style="margin-top: 15px">
                 <el-row :gutter="15">
-                  <el-col :span="6">
+                  <el-col :span="4">
                     <div class="grid-content">
                       <el-dropdown>
                       <span class="el-dropdown-link">
@@ -33,7 +33,7 @@
                       </el-dropdown>
                     </div>
                   </el-col>
-                  <el-col :span="6">
+                  <el-col :span="4">
                     <div class="grid-content">
                       <el-dropdown>
                       <span class="el-dropdown-link">
@@ -49,7 +49,7 @@
                       </el-dropdown>
                     </div>
                   </el-col>
-                  <el-col :span="6">
+                  <el-col :span="4">
                     <div class="grid-content">
                       <el-dropdown>
                       <span class="el-dropdown-link">
@@ -64,7 +64,7 @@
                       </el-dropdown>
                     </div>
                   </el-col>
-                  <el-col :span="6">
+                  <el-col :span="4">
                     <div class="grid-content">
                       <el-dropdown>
                       <span class="el-dropdown-link">
@@ -79,6 +79,21 @@
                       </el-dropdown>
                     </div>
                   </el-col>
+                  <el-col :span="5">
+                    <div class="grid-content">
+                      <el-dropdown>
+                      <span class="el-dropdown-link">
+                        Language
+                        <i class="el-icon-arrow-down el-icon--right"></i>
+                      </span>
+                        <el-dropdown-menu slot="dropdown">
+                          <el-dropdown-item>English</el-dropdown-item>
+                          <el-dropdown-item>中文</el-dropdown-item>
+                          <el-dropdown-item>Deutsch</el-dropdown-item>
+                        </el-dropdown-menu>
+                      </el-dropdown>
+                    </div>
+                  </el-col>
                 </el-row>
               </div>
             </el-col>
@@ -87,21 +102,16 @@
                 <el-row type="flex" class="row-bg" justify="end">
                   <el-row :span="6">
                     <div class="grid-content">
-                      <a href="signup.html">
-                        <el-button type="primary" icon="el-icon-s-platform" plain>Login</el-button>
+                      <a href="/login/popular">
+                        <el-button type="primary" icon="el-icon-s-platform" plain style="margin-right: 10px">Login</el-button>
                       </a>
-                      <a href="signup.html">
+                      <a href="/signup/popular">
                         <el-button plain icon="el-icon-s-flag">Join</el-button>
                       </a>
                       <el-dropdown style="margin-left: 10px">
-                        <el-button type="primary">
-                          Languages<i class="el-icon-arrow-down el-icon--right"></i>
+                        <el-button plain>
+                          Start
                         </el-button>
-                        <el-dropdown-menu slot="dropdown">
-                          <el-dropdown-item>English</el-dropdown-item>
-                          <el-dropdown-item>中文</el-dropdown-item>
-                          <el-dropdown-item>Deutsch</el-dropdown-item>
-                        </el-dropdown-menu>
                       </el-dropdown>
                     </div>
                   </el-row>
@@ -141,7 +151,6 @@
           </el-row>
         </el-footer>
       </el-container>
-<!--      <HelloWorld/>-->
     </v-main>
   </v-app>
 </template>

@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "mdbootstrap": "^4.19.1",
+    "mdbvue": "^6.7.1",
     "particles.js": "^2.0.0",
     "vue": "^2.6.11",
     "vue-particles": "^1.0.9",
