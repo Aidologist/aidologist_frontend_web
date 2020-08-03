@@ -109,9 +109,9 @@
                         <el-button plain icon="el-icon-s-flag">Join</el-button>
                       </a>
                       <el-dropdown style="margin-left: 10px">
-                        <el-button plain>
-                          Start
-                        </el-button>
+                        <a href="/main">
+                          <el-button plain>Start</el-button>
+                        </a>
                       </el-dropdown>
                     </div>
                   </el-row>
@@ -124,31 +124,37 @@
           <HelloWorld/>
         </el-main>
         <el-footer>
-          <hr/>
-          <el-row type="flex" class="row-bg" justify="front">
-            <div style="position: relative">
-              <span class="footerfont">Follow us:  </span>
-              <el-button-group>
-                <el-button size="mini">Twitter</el-button>
-                <el-button size="mini">Facebook</el-button>
-                <el-button size="mini">Instagram</el-button>
-                <el-button size="mini">Wechat</el-button>
-                <el-button size="mini">Youtube</el-button>
-                <el-button size="mini">LinkedIn</el-button>
-              </el-button-group>
-            </div>
-          </el-row>
-          <el-row type="flex" class="row-bg" justify="front">
-            <div style="position: relative">
-              <span class="footerfont">About our team:  </span>
-              <el-button-group>
-                <el-button size="mini">Team</el-button>
-                <el-button size="mini">Newsroom</el-button>
-                <el-button size="mini">Careers</el-button>
-                <el-button size="mini">Help</el-button>
-              </el-button-group>
-            </div>
-          </el-row>
+          <v-footer
+            dark
+            padless
+          >
+            <v-card
+              flat
+              tile
+              class="indigo lighten-1 white--text text-center"
+            >
+              <v-card-text>
+                <v-btn
+                  v-for="icon in icons"
+                  :key="icon"
+                  class="mx-4 white--text"
+                  icon
+                >
+                  <v-icon size="24px">{{ icon }}</v-icon>
+                </v-btn>
+              </v-card-text>
+
+              <v-card-text class="white--text pt-0">
+                Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </v-card-text>
+
+              <v-divider></v-divider>
+
+              <v-card-text class="white--text">
+                {{ new Date().getFullYear() }} — <strong>BunnyPo</strong>
+              </v-card-text>
+            </v-card>
+          </v-footer>
         </el-footer>
       </el-container>
     </v-main>
@@ -166,7 +172,12 @@ export default {
   },
 
   data: () => ({
-    //
+    icons: [
+      'mdi-facebook',
+      'mdi-twitter',
+      'mdi-linkedin',
+      'mdi-instagram'
+    ]
   })
 }
 </script>
