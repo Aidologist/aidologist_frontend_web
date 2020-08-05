@@ -110,7 +110,7 @@
                       </a>
                       <el-dropdown style="margin-left: 10px">
                         <a href="/main">
-                          <el-button plain>Start</el-button>
+                          <el-button plain icon="el-icon-s-flag">Start</el-button>
                         </a>
                       </el-dropdown>
                     </div>
